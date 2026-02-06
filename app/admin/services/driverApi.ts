@@ -12,7 +12,7 @@ interface Driver{
  
 export const driverApi = createApi({
   reducerPath: 'driverApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://my-app-backend-z82e.onrender.com/api/drivers',
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://digipod.onrender.com/api/drivers',
     prepareHeaders: (headers) => {
       const token = localStorage.getItem('token');
       if (token) {

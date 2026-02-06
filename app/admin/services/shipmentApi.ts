@@ -85,7 +85,7 @@ export interface CreateShipmentPayload {
 export const shipmentApi = createApi({
   reducerPath: "shipmentApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://my-app-backend-z82e.onrender.com/api/shipments",
+    baseUrl: "https://digipod.onrender.com/api/shipments",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem('token');
       if (token) {

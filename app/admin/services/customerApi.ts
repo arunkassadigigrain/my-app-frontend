@@ -33,7 +33,7 @@ export interface CreateCustomerPayload {
 
 export const customerApi = createApi({
   reducerPath: 'customerApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://my-app-backend-z82e.onrender.com/api/business',
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://digipod.onrender.com/api/business',
     prepareHeaders: (headers) => {
       const token = localStorage.getItem('token');
       if (token) {

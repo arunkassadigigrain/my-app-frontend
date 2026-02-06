@@ -15,7 +15,7 @@ interface Truck {
 
 export const truckApi = createApi({
   reducerPath: 'truckApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://my-app-backend-z82e.onrender.com/api/trucks',
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://digipod.onrender.com/api/trucks',
     prepareHeaders: (headers) => {
       const token = localStorage.getItem('token');
       if (token) {
