@@ -363,17 +363,13 @@ export default function AddShipment() {
                                 (option) => option.value === selectedBusinessId,
                               ) || null
                             }
-                            menuPosition="fixed"
-                            menuPlacement="auto"
-                            menuPortalTarget={
-                              typeof window !== "undefined"
-                                ? document.body
-                                : null
-                            }
-                            onChange={handleBusinessChange}
+                            components={{
+                              DropdownIndicator: null,
+                              IndicatorSeparator: null,
+                            }}
                             classNames={{
                               control: ({ isFocused }) =>
-                                `input input-bordered w-full outline-none rounded-2xl bg-base-100/50 border-base-300 transition-all duration-300 ${isFocused
+                                `select select-bordered w-full rounded-2xl bg-base-100/50 border-base-300 transition-all duration-300 ${isFocused
                                   ? "border-primary ring-4 ring-primary/20"
                                   : ""
                                 }`,
@@ -385,7 +381,10 @@ export default function AddShipment() {
                                 "mt-2 rounded-xl border border-base-300 bg-base-100 shadow-lg",
                               option: ({ isFocused, isSelected }) =>
                                 `px-3 py-2 cursor-pointer text-sm ${isFocused ? "bg-base-200" : ""
-                                } ${isSelected ? "bg-primary text-primary-content" : ""}`,
+                                } ${isSelected
+                                  ? "bg-primary text-primary-content"
+                                  : ""
+                                }`,
                             }}
                           />
                         </div>
@@ -413,8 +412,8 @@ export default function AddShipment() {
                               setContactPersonName(e.target.value)
                             }
                             className={`input input-bordered w-full cursor-not-allowed rounded-2xl border-base-300 transition-all duration-300 outline-none ${isBusinessSelected
-                                ? "bg-neutral/10 text-base-content/70 cursor-not-allowed"
-                                : "bg-base-100/50 focus:border-primary focus:ring-4 focus:ring-primary/20"
+                              ? "bg-neutral/10 text-base-content/70 cursor-not-allowed"
+                              : "bg-base-100/50 focus:border-primary focus:ring-4 focus:ring-primary/20"
                               }`}
                             required
                             disabled={isBusinessSelected || isSubmitting}
@@ -432,8 +431,8 @@ export default function AddShipment() {
                             readOnly
                             onChange={(e) => setEmail(e.target.value)}
                             className={`input input-bordered w-full cursor-not-allowed rounded-2xl border-base-300 transition-all duration-300 outline-none ${isBusinessSelected
-                                ? "bg-neutral/10 text-base-content/70 cursor-not-allowed"
-                                : "bg-base-100/50 focus:border-primary focus:ring-4 focus:ring-primary/20"
+                              ? "bg-neutral/10 text-base-content/70 cursor-not-allowed"
+                              : "bg-base-100/50 focus:border-primary focus:ring-4 focus:ring-primary/20"
                               }`}
                             required
                             disabled={isBusinessSelected || isSubmitting}
@@ -452,8 +451,8 @@ export default function AddShipment() {
                             value={phoneNumber}
                             onChange={(e) => setPhoneNumber(e.target.value)}
                             className={`input input-bordered w-full cursor-not-allowed rounded-2xl border-base-300 transition-all duration-300 outline-none ${isBusinessSelected
-                                ? "bg-neutral/10 text-base-content/70 cursor-not-allowed"
-                                : "bg-base-100/50 focus:border-primary focus:ring-4 focus:ring-primary/20"
+                              ? "bg-neutral/10 text-base-content/70 cursor-not-allowed"
+                              : "bg-base-100/50 focus:border-primary focus:ring-4 focus:ring-primary/20"
                               }`}
                             required
                             disabled={isBusinessSelected || isSubmitting}
@@ -487,8 +486,8 @@ export default function AddShipment() {
                               }))
                             }
                             className={`input input-bordered w-full cursor-not-allowed rounded-2xl border-base-300 transition-all duration-300 outline-none ${isBusinessSelected
-                                ? "bg-neutral/10 text-base-content/70 cursor-not-allowed"
-                                : "bg-base-100/50 focus:border-primary focus:ring-4 focus:ring-primary/20"
+                              ? "bg-neutral/10 text-base-content/70 cursor-not-allowed"
+                              : "bg-base-100/50 focus:border-primary focus:ring-4 focus:ring-primary/20"
                               }`}
                             required
                             disabled={isBusinessSelected || isSubmitting}
@@ -513,8 +512,8 @@ export default function AddShipment() {
                               }))
                             }
                             className={`input input-bordered w-full cursor-not-allowed rounded-2xl border-base-300 transition-all duration-300 outline-none ${isBusinessSelected
-                                ? "bg-neutral/10 text-base-content/70 cursor-not-allowed"
-                                : "bg-base-100/50 focus:border-primary focus:ring-4 focus:ring-primary/20"
+                              ? "bg-neutral/10 text-base-content/70 cursor-not-allowed"
+                              : "bg-base-100/50 focus:border-primary focus:ring-4 focus:ring-primary/20"
                               }`}
                             disabled={isBusinessSelected || isSubmitting}
                           />
