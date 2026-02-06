@@ -367,6 +367,7 @@ export default function AddShipment() {
                               DropdownIndicator: null,
                               IndicatorSeparator: null,
                             }}
+                            onChange={handleBusinessChange}
                             classNames={{
                               control: ({ isFocused }) =>
                                 `select select-bordered w-full rounded-2xl bg-base-100/50 border-base-300 transition-all duration-300 ${isFocused
