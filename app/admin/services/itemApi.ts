@@ -13,7 +13,7 @@ interface Item {
 
 export const itemApi = createApi({
   reducerPath: 'itemApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:8000/api/items',
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://my-app-backend-z82e.onrender.com/api/items',
         prepareHeaders: (headers) => {
       const token = localStorage.getItem('token');
       if (token) {

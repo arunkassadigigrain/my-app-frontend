@@ -85,7 +85,7 @@ export interface CreateShipmentPayload {
 export const shipmentApi = createApi({
   reducerPath: "shipmentApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8000/api/shipments",
+    baseUrl: "https://my-app-backend-z82e.onrender.com/api/shipments",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem('token');
       if (token) {

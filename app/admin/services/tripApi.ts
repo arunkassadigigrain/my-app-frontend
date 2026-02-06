@@ -147,7 +147,7 @@ export interface VerifyTripOTPPayload {
 export const tripsApi = createApi({
   reducerPath: "tripsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8000/api/trips",
+    baseUrl: "https://my-app-backend-z82e.onrender.com/api/trips",
     prepareHeaders: (headers) => {
       const token = localStorage.getItem('token');
       if (token) {
