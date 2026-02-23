@@ -28,6 +28,15 @@ export interface Truck {
   updatedAt: string;
 }
 
+export interface ShipmentOtp {
+  id: number;
+  shipmentId: number;
+  tripId: number;
+  otpCode: number;
+  isVerified: boolean;
+  expiresAt: string;
+}
+
 export interface Item {
   id: number;
   itemName: string;
@@ -80,7 +89,7 @@ export interface Shipment {
   Status: Status;
   createdAt: string;
   updatedAt: string;
-
+  shipmentOtps?: ShipmentOtp[];
   shipmentItems: ShipmentItem[];
   business: Business;
   shippingAddress: ShippingAddress;
