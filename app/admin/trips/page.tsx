@@ -80,7 +80,7 @@ export default function TripsPage() {
                                       shipment.shipment?.shippingAddress?.postalCode,
 
                                     ].filter(Boolean).join(",")|| "-",
-                                otp: trip.shipmentOtps?.find(o => o.shipmentId === shipment.shipmentId),
+                               otpCode:shipment.shipment?.shipmentOtps?.[0]?.otpCode || "-",
                                 itemDescription:shipment.shipment?.shipmentItems?.[0]?.item?.itemDescription || "-",
                                   tripStatus: trip.Status,
                                 // status: shipment.shipment?.Status || "-",
@@ -165,7 +165,7 @@ export default function TripsPage() {
                   <div className="p-3 rounded-lg bg-base-200">
                     <p className="text-xs text-blue-700">OTP Code</p>
                     <p className="font-mono font-bold text-lg">
-                      {selectedTrip.otp?.otpCode || "-"}
+                        {selectedTrip.otpCode || "-"}
                     </p>
                   </div>
                 </div>
