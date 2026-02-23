@@ -237,15 +237,15 @@ import { useGetShipmentStatusQuery } from "@/app/admin/services/shipmentApi";
 type TripStatus = "CREATED" | "ONTHEWAY" | "COMPLETED";
 
 const STATUS_COLORS: Record<TripStatus, string> = {
-  CREATED: "#FFB74D",
-  ONTHEWAY: "#64B5F6",
+  CREATED: "#64B5F6",
+  ONTHEWAY: "#FFB74D",
   COMPLETED: "#81C784",
 };
 
 const STATUS_LABELS: Record<TripStatus, string> = {
   CREATED: "Created",
   ONTHEWAY: "On the way",
-  COMPLETED: "Completed",
+  COMPLETED: "Delivered",
 };
 
 export default function TripsPieChart({
