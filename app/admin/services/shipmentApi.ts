@@ -9,6 +9,15 @@ export interface BillingAddress {
   postalCode: number;
 }
 
+export interface ShipmentOtp {
+  id: number;
+  shipmentId: number;
+  tripId: number;
+  otpCode: number;
+  isVerified: boolean;
+  expiresAt: string;
+}
+
 export interface ShippingAddress {
   id: number;
   addressLine1: string;
@@ -59,6 +68,7 @@ export interface Shipment {
   shippingAddressId: number;
   shippingAddress: ShippingAddress;
   totalAmount: number;
+  shipmentOtps?: ShipmentOtp[];
   shipmentItems: ShipmentItem[];
   status: "CREATED" | "ONTHEWAY" | "COMPLETED";
   createdAt: string;
