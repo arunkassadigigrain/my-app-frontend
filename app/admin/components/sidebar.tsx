@@ -390,12 +390,16 @@ export default function Sidebar() {
 
                   <li className="mt-auto">
                     <h1 className="text-l opacity-75">
-                      Powered by
-                      <Image src="/digigrainLogo2.png"
+                    <Link href="https://www.digigrain.in/" target="_blank" className="flex items-center gap-2">
+                        Powered by
+                      <Image
+                        src="/digigrainLogo2.png"
                         alt="Digi Grain Logo"
                         width={48}
                         height={48}
-                        className="object-contain rounded-xl" />
+                        className="object-contain rounded-xl"
+                      />
+                    </Link>
                     </h1>
 
                     <div className="flex items-center justify-between px-4 py-3">
